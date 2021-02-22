@@ -1,0 +1,340 @@
+$violet-color-bold: #663399;
+$white-color: #ffffff;
+$violet-color-light: #9f62c9;
+
+.content-wrapper {
+    margin-top: 200px;
+    max-width: 100%;
+
+    .label {
+        font-weight: lighter !important;
+        opacity: 0.7;
+        font-size: 14px;
+    }
+
+    /* The range slider css */
+    .rangeinput {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 5px;
+        background: #c6c6d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+    }
+
+    .rangeinput:hover {
+        opacity: 1;
+    }
+
+    .rangeinput::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        background: $violet-color-bold;
+        cursor: pointer;
+        border: 2px solid $white-color;
+        border-radius: 24px;
+    }
+
+    .rangeinput::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        background: $violet-color-bold;
+        border: 2px solid $white-color;
+        border-radius: 24px;
+        cursor: pointer;
+    }
+
+    .first-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        background-image: url(../../assets/svg/circle-2.svg);
+        background-repeat: no-repeat;
+        background-size: 30%;
+        background-position: -50px -50px;
+
+        .sub-head {
+            .photo-sec {
+                img {
+                    max-width: 75%;
+                    margin-top: 10%;
+                }
+            }
+            .sub-head-title {
+                width: 300px;
+                font-size: 26px;
+                font-weight: 500;
+                color: #222222;
+                border-bottom: 5px solid;
+            }
+
+            .left-dots {
+                position: absolute;
+                left: 12%;
+                margin-top: -33px;
+            }
+        }
+
+        .right-dots {
+            position: absolute;
+            right: 7%;
+            top: 700px;
+        }
+
+        .cards-wrapper {
+            display: flex;
+            flex-direction: row;
+            -webkit-box-pack: center;
+            justify-content: center;
+
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                padding: 5px;
+                border-radius: 24px;
+            }
+
+            .first-card {
+                width: 300px;
+                height: 500px;
+                background: #fff;
+
+                h3 {
+                    font-size: 14px;
+                    padding: 5px;
+                    font-weight: 500;
+                    text-align: center;
+                    padding-bottom: 20px;
+                }
+
+                .input-field {
+                    padding: 10px 25px 20px 25px;
+
+                    .label-text {
+                        font-size: 13px;
+                        font-weight: 400;
+                        padding-bottom: 10px;
+                        opacity: 0.7;
+                    }
+
+                    .selected-value {
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding-bottom: 10px;
+                    }
+
+                    .tenure-list {
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        scroll-behavior: smooth;
+                        padding-bottom: 5px;
+                        border-bottom: 1px solid #dcdcdc;
+
+                        .tenure-item {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .switch {
+                        position: relative;
+                        width: 50px;
+                        height: 24px;
+                        float: right;
+                    }
+
+                    .switch input {
+                        opacity: 0;
+                        width: 0;
+                        height: 0;
+                    }
+
+                    .slider {
+                        position: absolute;
+                        cursor: pointer;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: #ccc;
+                        -webkit-transition: 0.4s;
+                        transition: 0.4s;
+                    }
+
+                    .slider:before {
+                        position: absolute;
+                        content: "";
+                        height: 18px;
+                        width: 18px;
+                        left: 4px;
+                        bottom: 3px;
+                        background-color: white;
+                        -webkit-transition: 0.4s;
+                        transition: 0.4s;
+                    }
+
+                    input:checked + .slider {
+                        background-color: $violet-color-bold;
+                    }
+
+                    input:focus + .slider {
+                        box-shadow: 0 0 1px $violet-color-bold;
+                    }
+
+                    input:checked + .slider:before {
+                        -webkit-transform: translateX(26px);
+                        -ms-transform: translateX(26px);
+                        transform: translateX(26px);
+                    }
+
+                    .slider.round {
+                        border-radius: 34px;
+                    }
+
+                    .slider.round:before {
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .second-card {
+                width: 160px;
+                height: 300px;
+                background: $violet-color-bold;
+                margin-top: 70px;
+                text-align: center;
+                color: $white-color;
+
+                h3 {
+                    padding-top: 5px;
+                }
+
+                .loan-amt {
+                    padding-top: 65px;
+                }
+
+                .emi-details {
+                    padding-top: 20px;
+                }
+
+                .btn-sm {
+                    text-transform: uppercase;
+                    margin-top: 20px;
+                    color: $violet-color-bold;
+                    font-size: 14px;
+                    text-align: center;
+                    outline: none;
+                    width: 120px;
+                    height: 40px;
+                    box-shadow: 0px 0px 20px #00000033;
+                    border: 2px solid $violet-color-bold;
+                    border-radius: 24px;
+                }
+
+                .btn-sm:hover {
+                    background: $violet-color-light;
+                    color: $white-color;
+                    border: 2px solid $white-color;
+                }
+            }
+        }
+    }
+
+    .second-wrapper {
+        background-image: url(../../assets/svg/sol_wave_bg.svg);
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 14%;
+
+            .row {
+                max-width: 300px;
+
+                .promo-card {
+                    justify-content: center;
+                    border: 1px solid $white-color;
+                    border-radius: 20px;
+                    margin: 30px;
+                    padding: 20px;
+                    box-shadow: 0px 0px 30px #2321321f;
+                    background: $white-color;
+
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        padding: 10px;
+                    }
+
+                    h4 {
+                        display: block;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: #333333;
+                        padding-bottom: 5px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        font-weight: 300;
+                        color: #999999;
+                    }
+                }
+
+                .promo-card:hover {
+                    background: $violet-color-light;
+
+                    h4,
+                    p {
+                        color: $white-color;
+                    }
+                }
+            }
+
+            .second-flex {
+                padding-top: 100px;
+            }
+
+            .third-flex {
+                margin-top: 200px;
+
+                .sub-header {
+                    font-size: 30px;
+                    line-height: 32px;
+                    font-weight: 500;
+                    padding-bottom: 30px;
+                    color: #162637;
+                }
+
+                .quote-text {
+                    color: #777777;
+                    padding-top: 30px;
+                }
+
+                .open-ac-btn {
+                    margin-top: 60px;
+                    color: $violet-color-bold;
+                    font-size: 16px;
+                    text-align: center;
+                    outline: none;
+                    width: 279px;
+                    height: 58px;
+                    box-shadow: 0px 0px 20px #00000033;
+                    border: 2px solid $violet-color-bold;
+                    border-radius: 24px;
+                }
+
+                .open-ac-btn:hover {
+                    background: $violet-color-light;
+                    color: $white-color;
+                }
+            }
+        }
+    }   
+}

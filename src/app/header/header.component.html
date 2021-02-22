@@ -1,0 +1,36 @@
+<div class="main-container" [class.header-bg]='sticky'>
+    <!-- nav bar starts  -->
+    <nav class="navbar" [class.sticky]="sticky" #stickyMenu>
+
+        <div class="logo">
+            <a href="#">
+                <img src="../assets/images/logo/logo.png" alt="Open" class="open-logo">
+            </a>
+        </div>
+
+        <div class="navbar-list">
+            <ul class="menu">
+                <li class="nav-item">
+                    <a href="#home" class="menu-btn">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="menu-btn">Solutions</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="menu-btn">Pricing</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="navbar-buttons">
+            <a>
+                <button class="login-btn">Login</button>
+            </a>
+            <a>
+                <button class="signup-btn">Get Started</button>
+            </a>
+        </div>
+    </nav>
+    <!-- nav bar ends  -->
+</div>

@@ -1,0 +1,132 @@
+<div class="content-wrapper">
+    <!-- first container starts -->
+    <div class="first-wrapper">
+        <div class="sub-head">
+            <h1 class="sub-head-title">We make it Super Simple</h1>
+
+            <div class="photo-sec">
+                <img src="../../assets/images/collect_img-video/collect_img-video.png" alt="">
+            </div>
+
+            <div class="left-dots">
+                <img src="../../assets/svg/accounting_dots.svg" alt="">
+            </div>
+        </div>
+
+        <div class="cards-wrapper">
+            <div class="column first-col">
+                <div class="card first-card">
+                    <h3>Eligibility Calculator</h3>
+                    <!-- Monthly income field  -->
+                    <div class="input-field">
+                        <p class="label-text">Monthly Income</p>
+                        <p class="selected-value">₹ {{selectedValue}}</p>
+                        <input type="range" [min]="minimumIncomeValue" [max]="maximumIncomeValue"
+                            [(ngModel)]="selectedValue" step="10" class='rangeinput' name='monthly-income'>
+                    </div>
+                    <!-- Monthly expense field  -->
+                    <div class="input-field">
+                        <p class="label-text">Monthly Expense</p>
+                        <p class="selected-value">₹ {{selectedExpenseValue}}</p>
+                        <input type="range" [min]="minimumExpenseValue" [max]="maximumExpenseValue"
+                            [(ngModel)]="selectedExpenseValue" step="10" class='rangeinput' name='monthly-income'>
+                    </div>
+                    <!-- EMI options dropdown  -->
+                    <div class="input-field">
+                        <p class="label-text">Repayment Tenure</p>
+                        <select name="tenure" class="tenure-list">
+                            <option *ngFor='let t of EMITenures' [value]="t.value" class="tenure-item">
+                                {{t.viewValue}}</option>
+                        </select>
+                    </div>
+                    <!-- existing loan toggle  -->
+                    <div class="input-field">
+                        <label class="label-text">Do you any existing loans? </label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <!-- EMI of existing loan field  -->
+                    <div class="input-field">
+                        <p class="label-text">EMI of existing loan (optional)</p>
+                        <input type="number" class="tenure-list">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="column second-col">
+                <div class="card second-card">
+                    <div class="loan-amt">
+                        <p class="label">Loan Amount</p>
+                        <h3>₹ 1,00,000</h3>
+                    </div>
+
+                    <div class="emi-details">
+                        <p class="label">Your EMI will be</p>
+                        <h3>₹ 15,000</h3>
+                    </div>
+
+                    <button class="btn-sm">
+                        Get Money
+                    </button>
+                </div>
+            </div>
+
+            <div class="right-dots">
+                <img src="../../assets/svg/accounting_dots.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- second container starts  -->
+    <div class="second-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="promo-card">
+                    <img src="../../assets/images/Get Paid Instantly.png" alt="">
+                    <h4>Quick cash disbursement</h4>
+                    <p>Get terms loans that your business needs within 72 hrs</p>
+                </div>
+
+                <div class="promo-card">
+                    <img src="../../assets/images/Low interest rate.png" alt="">
+                    <h4>Low-interest rate</h4>
+                    <p>Achieve your financial goals with an amazing interest rate starting at 13% per annum</p>
+                </div>
+
+                <div class="promo-card">
+                    <img src="../../assets/images/Secure Payments.png" alt="">
+                    <h4>Zero Paperwork</h4>
+                    <p>Get started instantly by submitting only your basic details & bank statements</p>
+                </div>
+            </div>
+
+            <div class="row second-flex">
+                <div class="promo-card card-bg">
+                    <img src="../../assets/images/freelancer_feature_icon_6@1.5x.png" alt="">
+                    <h4>Ace your business finances</h4>
+                    <p>Manage banking, accounting & everything in between, on one platform</p>
+                </div>
+
+                <div class="promo-card">
+                    <img src="../../assets/images/Covid.png" alt="">
+                    <h4>Loans to fight COVID-19</h4>
+                    <p>Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh</p>
+                </div>
+
+            </div>
+
+            <div class="row third-flex">
+                <h2 class='sub-header'>Boost your business with Open</h2>
+                <img src="../../assets/svg/Line 3.svg">
+                <p class="quote-text">Get your hands on a term loan that’s crafted for your business</p>
+                <button class="open-ac-btn">
+                    Get an Open Account
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

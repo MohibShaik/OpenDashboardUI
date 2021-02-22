@@ -1,0 +1,125 @@
+$violet-color-bold: #663399;
+$white-color: #ffffff;
+$violet-color-light: #9f62c9;
+
+.main-container {
+    left: 0;
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index: 100;
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width {
+    // max-width: 1400px;
+    max-width: 88%;
+    padding: 0 50px;
+    margin: auto;
+}
+
+/* navbar styling */
+.navbar {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    max-width: 88%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.open-logo {
+    width: 70%;
+}
+
+.navbar-list {
+    .menu {
+        margin-left: 180px;
+        padding: 0;
+        list-style: none;
+
+        .nav-item {
+            float: left;
+            width: 150px;
+            height: 45px;
+            text-align: center;
+            font-size: 20px;
+
+            .menu-btn {
+                text-decoration: none;
+                display: block;
+                font-size: 16px;
+                color: #222222;
+                font-weight: 600;
+                padding: 10px 0;
+                cursor: pointer;
+                transition: color 0.3s ease;
+                font-family: "Open Sans", sans-serif;
+            }
+
+            .menu-btn:hover {
+                color: $violet-color-bold;
+            }
+        }
+    }
+}
+
+.navbar-buttons {
+    display: flex;
+    a {
+        margin: 0 10px;
+
+        button {
+            outline: none;
+            box-sizing: border-box;
+            min-height: 40px;
+            border-radius: 24px;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0px 0px 20px #00000033;
+            cursor: pointer;
+            font-family: "Montserrat", sans-serif;
+        }
+        .login-btn {
+            min-width: 110px;
+            padding: 0 35px;
+            border: 2px solid $violet-color-bold;
+            color: $violet-color-bold;
+            background: 0 0;
+        }
+
+        .login-btn:hover {
+            color: $white-color;
+            background: $violet-color-bold;
+        }
+
+        .signup-btn {
+            min-width: 150px;
+            background: transparent linear-gradient(90deg, $violet-color-light 0%, $violet-color-bold 100%) 0% 0%
+                no-repeat padding-box;
+            color: $white-color;
+        }
+
+        .signup-btn:hover {
+            color: $violet-color-bold;
+            background: $white-color;
+        }
+    }
+}
+
+.navbar.sticky {
+    padding: 0px !important;
+    transition: padding 0.5s linear;
+}
+
+.header-bg {
+    background-color: $white-color !important;
+    transition: background-color 0.2s linear;
+    box-shadow: 0 5px 15px 0 rgb(0 0 0 / 10%);
+}
