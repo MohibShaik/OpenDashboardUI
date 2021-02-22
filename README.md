@@ -6,7 +6,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1. Clone the repository code by executing the below command : 
     ``` git clone https://github.com/MohibShaik/OpenDashboardUI.git 
-        cd OpenDashboardUI
         '''
 
 
